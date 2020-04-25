@@ -1,0 +1,29 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './{{pascalCase name}}.module.css';
+
+class {{pascalCase name}} extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: `{{pascalCase name}} Component works!`
+      };
+  }
+  render() {
+    return (
+      <div>
+        <h1>{this.state.name}</h1>
+      </div>
+    );
+  }
+};
+
+{{pascalCase name}}.defaultProps = {
+
+};
+
+{{pascalCase name}}.propTypes = {
+
+};
+
+export default {{pascalCase name}};
