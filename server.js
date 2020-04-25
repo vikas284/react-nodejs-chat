@@ -6,8 +6,7 @@ var path = require('path');
 
 
 app.get('/', (req, res) => {
-    res.json([{ email: "vish1u@gmail.com", password: "Vishu29@" }]);
-    //res.sendFile(path.join(__dirname,'/client/build', 'index.html'));
+    res.sendFile(path.join(__dirname,'/client/build', 'index.html'));
 });
 app.get('/users', (req, res) => {
     res.json([{ email: "vish1u@gmail.com", password: "Vishu29@" }]);
