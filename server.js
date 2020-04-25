@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'/client/build', '/index.html'));
 });
 app.get('/users', (req, res) => {
-    res.json([{ email: "vishu@gmail.com", password: "Vishu29@" }]);
+    res.json([{ email: "vish1u@gmail.com", password: "Vishu29@" }]);
 })
 
 server = app.listen(8000)
