@@ -12,4 +12,6 @@ app.get('/users', (req, res) => {
     res.json([{ email: "vish1u@gmail.com", password: "Vishu29@" }]);
 })
 
-server = app.listen(5000)
+server = app.listen(5000,function(){
+    console.log("Server is listening on port number :5000")
+})
