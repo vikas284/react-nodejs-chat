@@ -1,7 +1,9 @@
 import actions from '../Actions/actions';
 
 const defaultState = {
-    usersList: []
+    usersList: [],
+    userinfo: {}
+
 };
 
 function rootReducer(state = defaultState, action) {
@@ -10,6 +12,9 @@ function rootReducer(state = defaultState, action) {
             return {
                 usersList: [...state.usersList, action.data]
             }
+        case actions.USER_INFO:
+            state.userinfo = action.data;
+            return state;
         default:
             return state;
     }

@@ -13,10 +13,9 @@ class Chat extends React.Component {
   render() {
     return (
       <div>
-        <h1>{this.state.name}</h1>
-        {this.props.chatuserList.map((user) => (
-          <ul key={user.email}><li>{user.email} {user.password}</li></ul> 
-        ))}
+        <h5>{this.props.userinfo.name}</h5>
+        <h5>{this.props.userinfo.email}</h5>
+        <img src={this.props.userinfo.imageUrl}/>
       </div>
     );
   }
@@ -32,7 +31,7 @@ Chat.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    chatuserList: state.usersList
+    userinfo: state.userinfo
   };
 }
 export default connect(mapStateToProps)(Chat);
